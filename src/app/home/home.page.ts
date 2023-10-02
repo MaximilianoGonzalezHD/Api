@@ -24,6 +24,7 @@ export class HomePage {
     },(error)=>{
       console.log(error);
     });
+    
   }
   
   compareWithFn = (o1:any, o2:any) => {
@@ -31,6 +32,19 @@ export class HomePage {
   
   };
 
-  
-  
+  guardarPost(){
+
+  }
+  createPost(){
+    var post={
+    title: 'titulo prueba',
+    body: 'algun cuerpo del post',
+    userId: 1
+    }
+    this.api.createPost(post).subscribe((success)=>{
+    console.log(success);
+    },error=>{
+    console.log(error);
+    })
+   
 }
